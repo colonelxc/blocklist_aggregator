@@ -11,7 +11,8 @@ def parse(blob):
             line = line[:comment]
 
         parts = line.split()
-        blist.extend(parts[1:])
+        doms = parts[1:] #grab all domains on this line
+        blist.extend(doms)
 
     return blist
 
