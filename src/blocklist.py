@@ -9,7 +9,7 @@ from collections import defaultdict
 class Blocklist(object):
    
     def __init__(self):
-        self._domains = defaultdict(list)
+        self._domains = defaultdict(set)
         self._source_totals = dict()
 
 
@@ -18,7 +18,7 @@ class Blocklist(object):
         self._source_totals[source] = len(domain_list)
         
         for domain in domain_list:
-            self._domains[domain].append(source)
+            self._domains[domain].add(source)
 
 
     def get_blocklist(self):
@@ -31,7 +31,7 @@ class Blocklist(object):
 
         for domain, sources in self._domains.iteritems():
             if len(sources) == 1:
-                uniques[sources[0]] += 1
+                uniques[list(sources)[0]] += 1
 
         return uniques
 
