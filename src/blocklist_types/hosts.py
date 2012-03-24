@@ -21,7 +21,7 @@ def write(header, domainlist, ip):
     output = ""
     headerlines = header.splitlines(1)
     for line in headerlines:
-        output += '#' + line
+        output += '# ' + line
 
     output += '\n\n'
 
