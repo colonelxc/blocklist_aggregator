@@ -1,5 +1,5 @@
 from nose.tools import *
-import blocklist_aggregator.domain_utils as domain_utils
+import domain_utils
 
 def URLtoHost_test():
 
