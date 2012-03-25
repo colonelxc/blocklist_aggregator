@@ -1,0 +1,5 @@
+phish_id,url,phish_detail_url,submission_time,verified,verification_time,online,target
+123456,http://www.example.com/,http://www.phishtank.com/phish_detail.php?phish_id=123456,2009-06-19T15:15:47+00:00,yes,2009-06-19T15:37:31+00:00,yes,1st National Example Bank
+123457,http://other.example.com/,http://www.phishtank.com/phish_detail.php?phish_id=123456,2009-06-19T15:15:47+00:00,yes,2009-06-19T15:37:31+00:00,yes,super phishy bank
+123458,http://192.168.0.1/,http://www.phishtank.com/phish_detail.php?phish_id=123456,2009-06-19T15:15:47+00:00,yes,2009-06-19T15:37:31+00:00,yes,phishes r us
+
