@@ -67,7 +67,7 @@ def output(config, datalist):
 
     if config.has_section("output"):
         try:
-            outputfile = config.get("output", "file")
+            outputfile = os.path.expanduser(config.get("output", "file"))
             fp = open(outputfile, 'w')
             outputfp = fp
         except ConfigParser.NoOptionError:
