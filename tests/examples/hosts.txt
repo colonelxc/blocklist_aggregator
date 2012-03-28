@@ -1,0 +1,6 @@
+# This is an example host file blacklist
+
+127.0.0.1   badhost.com
+127.0.0.1   virus.example.com
+127.0.0.1   malware.example.com
+

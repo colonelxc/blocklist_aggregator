@@ -1,0 +1,4 @@
+abc.example.com
+badness.example.com
+superbad.example.com
+
