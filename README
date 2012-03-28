@@ -1,0 +1,25 @@
+blocklist_aggregator
+
+A tool to aggregate all the blocklists you collect into one nice list.
+
+
+Example Usage:
+
+cd src
+./blocklist_aggregator.py -c default_config.ini
+
+Description:
+
+There are lots of different groups that are busy keeping track of malicious or unwanted domains.  To protect myself (and anyone else I let on my wifi), I decided that it would be a good idea to block those domains at my router, with a nice old fashioned hosts file, which is read by dnsmasq.
+
+The problem I ran into was that not all of these lists that I found were in a hosts file format.  So I needed something that would be able to parse these various formats, and be able to output it to something more standard.  While I was at it, I figured I would aggregate the domains from several files, so that I could create one master hosts file.
+
+As an aside, I also wanted to figure out more about these lists.  Many of them say that they get their domains from various sources.  Naturally, it's possible that one of the lists uses another as one of its sources.  So this program tracks and prints out some stats about how many unique domains each list has, compared to the total domains.
+
+What it is not:
+This program doesn't download new lists, you'll have to set up something like wget in a different crontab entry.
+
+TODO:
+
+Add more list types of course!
+
