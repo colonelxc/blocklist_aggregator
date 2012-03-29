@@ -1,0 +1,2 @@
+http://bad.example.com/malware.exe
+http://phish.example.com/login.php

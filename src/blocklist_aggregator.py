@@ -10,6 +10,7 @@ from urlparse import urlparse
 import blocklist
 import blocklist_types.hosts
 import blocklist_types.domain_list
+import blocklist_types.url_list
 import blocklist_types.phishtank_csv
 
 version = 0.1
@@ -42,10 +43,15 @@ def main():
             data = get_source(location)
             blist.add(source, blocklist_types.hosts.parse(data)) 
 
-    if configparser.has_section("list"):
-        for source,location in configparser.items("list"):
+    if configparser.has_section("domain_list"):
+        for source,location in configparser.items("domain_list"):
             data = get_source(location)
             blist.add(source, blocklist_types.domain_list.parse(data))
+
+    if configparser.has_section("url_list"):
+        for source,location in configparser.items("url_list"):
+            data = get_source(location)
+            blist.add(source, blocklist_types.url_list.parse(data))
 
     if configparser.has_section("phishtank_csv"):
         for source, location in configparser.items("phishtank_csv"):
