@@ -1,6 +1,6 @@
 blocklist_aggregator
 
-A tool to aggregate all the blocklists you collect into one nice list.
+A tool to aggregate all the domain blocklists you collect into one nice list.
 
 
 Example Usage:
@@ -22,4 +22,11 @@ This program doesn't download new lists, you'll have to set up something like wg
 TODO:
 
 Add more list types of course!
+-zone files
+-hosts.deny
+
+Add a better header mechanism
+-Add dynamic information (date/time, number of entries, sources)
+
+Testing needed for blocklist_aggregator.py
 
