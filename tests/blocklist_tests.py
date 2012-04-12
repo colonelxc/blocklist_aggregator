@@ -18,6 +18,14 @@ def test_overlap():
     bl = b.get_blocklist()
     assert_equal(sorted(bl), ['a.com', 'b.com', 'c.com'])
 
+def test_whitelist():
+    b = blocklist.Blocklist()
+    b.add('source1', ['a.com', 'b.com'])
+
+    b.add_whitelist(['a.com'])
+    bl = b.get_blocklist()
+    assert_equal(bl, ['b.com'])
+
 def test_stats():
     b = blocklist.Blocklist()
     b.add('source1', ['a.com', 'b.com'])

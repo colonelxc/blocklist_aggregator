@@ -11,6 +11,7 @@ class Blocklist(object):
     def __init__(self):
         self._domains = defaultdict(set)
         self._source_totals = dict()
+        self._whitelist = set()
 
 
     def add(self, source, domain_list):
@@ -20,9 +21,13 @@ class Blocklist(object):
         for domain in domain_list:
             self._domains[domain].add(source)
 
+    def add_whitelist(self, whitelist):
+        
+        self._whitelist.update(whitelist)
+
 
     def get_blocklist(self):
-        return self._domains.keys()
+        return list(set(self._domains.keys()).difference(self._whitelist))
 
 
     def stats_uniques(self):

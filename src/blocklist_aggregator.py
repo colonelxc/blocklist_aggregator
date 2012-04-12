@@ -58,6 +58,11 @@ def main():
             data = get_source(location)
             blist.add(source, blocklist_types.phishtank_csv.parse(data))
 
+    if configparser.has_section("whitelist"):
+        for source, location in configparser.items("whitelist"):
+            data = get_source(location)
+            blist.add_whitelist( blocklist_types.domain_list.parse(data))
+
     output(configparser, sorted(blist.get_blocklist()))
 
 

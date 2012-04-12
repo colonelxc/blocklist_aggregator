@@ -1,0 +1,6 @@
+google.com
+mail.google.com
+docs.google.com
+yahoo.com
+finance.yahoo.com
+
